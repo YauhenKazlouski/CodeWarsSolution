@@ -20,3 +20,15 @@ func maxMultiple(_ d: Int, _ b: Int) -> Int {
     return b - b % d
 }
 
+/* Leap Years */
+func isLeapYear(_ year: Int) -> Bool {
+  if year % 400 == 0 {
+        return true
+    } else if year % 100 == 0 {
+        return false
+    } else if year % 4 == 0 {
+        return true
+    } else {
+        return false
+    }
+}
