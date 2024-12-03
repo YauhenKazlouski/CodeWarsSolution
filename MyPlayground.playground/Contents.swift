@@ -32,3 +32,9 @@ func isLeapYear(_ year: Int) -> Bool {
         return false
     }
 }
+
+/* Extra Perfect Numbers */
+func extraPerfectNumbers(upTo n: Int) -> [Int] {
+    guard n > 0 else { return [] }
+    return stride(from: 1, through: n, by: 2).map { $0 }
+}
