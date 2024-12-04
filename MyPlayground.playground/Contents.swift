@@ -38,3 +38,22 @@ func extraPerfectNumbers(upTo n: Int) -> [Int] {
     guard n > 0 else { return [] }
     return stride(from: 1, through: n, by: 2).map { $0 }
 }
+
+/* Valid Braces */
+func validBraces(_ string:String) -> Bool {
+  let matchingBraces: [Character: Character] = [")": "(", "]": "[", "}": "{"]
+    var stack: [Character] = []
+    
+    for char in string {
+        if let matchingOpening = matchingBraces[char] {
+            if stack.last == matchingOpening {
+                stack.removeLast()
+            } else {
+                return false
+            }
+        } else {
+            stack.append(char)
+        }
+    }
+    return stack.isEmpty
+}
