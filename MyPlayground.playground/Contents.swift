@@ -57,3 +57,17 @@ func validBraces(_ string:String) -> Bool {
     }
     return stack.isEmpty
 }
+
+//Square Every Digit
+func squareDigits(_ num: Int) -> Int {
+  let numString = String(num)
+        let squaredString = numString.compactMap { char in
+        if let digit = Int(String(char)) {
+            return String(digit * digit)
+        }
+        return nil
+    }.joined()
+    
+    return Int(squaredString) ?? 0
+}
+
