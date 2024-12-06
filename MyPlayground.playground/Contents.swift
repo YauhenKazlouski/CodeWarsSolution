@@ -70,4 +70,23 @@ func squareDigits(_ num: Int) -> Int {
     
     return Int(squaredString) ?? 0
 }
+// Bouncing Balls
+func bouncingBall(_ h: Double, _ bounce: Double, _ window: Double) -> Int {
+ guard h > 0, bounce > 0, bounce < 1, window < h else {
+        return -1
+    }
+    
+    var count = 0
+    var currentHeight = h
+    
+    while currentHeight > window {
+        count += 1
+        currentHeight *= bounce
+        if currentHeight > window {
+            count += 1
+        }
+    }
+    
+    return count
+}
 
