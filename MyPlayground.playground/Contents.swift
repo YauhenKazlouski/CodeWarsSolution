@@ -90,3 +90,10 @@ func bouncingBall(_ h: Double, _ bounce: Double, _ window: Double) -> Int {
     return count
 }
 
+//Transportation on vacation
+func RentalCarCost(_ days: Int) -> Int {
+let dailyRate = 40
+    let discount = days >= 7 ? 50 : (days >= 3 ? 20 : 0)
+    return days * dailyRate - discount
+}
+
