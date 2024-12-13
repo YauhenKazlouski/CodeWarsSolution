@@ -97,3 +97,9 @@ let dailyRate = 40
     return days * dailyRate - discount
 }
 
+//Sum Mixed Array
+func sumMix(_ arr: [Any]) -> Int {
+return array.compactMap { element in
+        (element as? Int) ?? (Int(element as? String ?? ""))
+    }.reduce(0, +)
+}
