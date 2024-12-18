@@ -99,7 +99,11 @@ let dailyRate = 40
 
 //Sum Mixed Array
 func sumMix(_ arr: [Any]) -> Int {
-return array.compactMap { element in
+return arr.compactMap { element in
         (element as? Int) ?? (Int(element as? String ?? ""))
     }.reduce(0, +)
+}
+//Grasshopper - Check for factor
+func checkForFactor(_ base: Int, _ factor: Int) -> Bool {
+    return base % factor == 0
 }
