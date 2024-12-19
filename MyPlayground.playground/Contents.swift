@@ -107,3 +107,7 @@ return arr.compactMap { element in
 func checkForFactor(_ base: Int, _ factor: Int) -> Bool {
     return base % factor == 0
 }
+//Sum of positive
+func sumOfPositives (_ numbers: [Int] ) -> Int {
+    return numbers.filter { $0 > 0 }.reduce(0, +)
+}
