@@ -111,3 +111,8 @@ func checkForFactor(_ base: Int, _ factor: Int) -> Bool {
 func sumOfPositives (_ numbers: [Int] ) -> Int {
     return numbers.filter { $0 > 0 }.reduce(0, +)
 }
+
+//Reversed Strings
+func reverse(_ str: String) -> String {
+     return String(str.reversed())
+}
