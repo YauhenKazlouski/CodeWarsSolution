@@ -116,3 +116,8 @@ func sumOfPositives (_ numbers: [Int] ) -> Int {
 func reverse(_ str: String) -> String {
      return String(str.reversed())
 }
+
+//Convert boolean values to strings 'Yes' or 'No'.
+func boolToWord(_ bool: Bool) -> String {
+bool ? "Yes" : "No"
+}
