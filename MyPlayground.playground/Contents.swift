@@ -121,3 +121,14 @@ func reverse(_ str: String) -> String {
 func boolToWord(_ bool: Bool) -> String {
 bool ? "Yes" : "No"
 }
+
+//Highest and Lowest
+func highAndLow(_ numbers: String) -> String {
+  let numberArray = numbers.split(separator: " ").compactMap { Int($0) }
+    
+    guard let maxNumber = numberArray.max(), let minNumber = numberArray.min() else {
+        return ""
+    }
+    
+    return "\(maxNumber) \(minNumber)"
+}
