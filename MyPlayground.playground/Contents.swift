@@ -132,3 +132,9 @@ func highAndLow(_ numbers: String) -> String {
     
     return "\(maxNumber) \(minNumber)"
 }
+
+//You Can't Code Under Pressure #1
+
+func doubleInteger(_ num: Int) -> Int {
+  num * 2
+}
