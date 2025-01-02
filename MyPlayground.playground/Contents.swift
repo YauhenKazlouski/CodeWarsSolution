@@ -1,6 +1,5 @@
 import UIKit
 /* Create a function add(n)Add(n) which returns a function that always adds n to any number*/
-
 func add(_ n: Int) -> ((Int) -> Int) {
     func Add(_ m: Int) -> Int {
         return n + m
@@ -70,6 +69,7 @@ func squareDigits(_ num: Int) -> Int {
     
     return Int(squaredString) ?? 0
 }
+
 // Bouncing Balls
 func bouncingBall(_ h: Double, _ bounce: Double, _ window: Double) -> Int {
  guard h > 0, bounce > 0, bounce < 1, window < h else {
@@ -103,10 +103,12 @@ return arr.compactMap { element in
         (element as? Int) ?? (Int(element as? String ?? ""))
     }.reduce(0, +)
 }
+
 //Grasshopper - Check for factor
 func checkForFactor(_ base: Int, _ factor: Int) -> Bool {
     return base % factor == 0
 }
+
 //Sum of positive
 func sumOfPositives (_ numbers: [Int] ) -> Int {
     return numbers.filter { $0 > 0 }.reduce(0, +)
@@ -134,7 +136,11 @@ func highAndLow(_ numbers: String) -> String {
 }
 
 //You Can't Code Under Pressure #1
-
 func doubleInteger(_ num: Int) -> Int {
   num * 2
+}
+
+//Convert a Number to a String
+func numberToString(number: Int) -> String {
+  String(number)
 }
