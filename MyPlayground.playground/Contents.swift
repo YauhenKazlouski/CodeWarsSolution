@@ -144,3 +144,8 @@ func doubleInteger(_ num: Int) -> Int {
 func numberToString(number: Int) -> String {
   String(number)
 }
+
+//Floating-point Approximation (III)
+func quadratic(_ a: Double, _ b: Double, _ c: Double) -> Double {
+  -c / b
+}
