@@ -161,3 +161,32 @@ func disariumNumber(_ number: Int) -> String {
     
     return sum == number ? "Disarium !!" : "Not !!"
 }
+
+//How Many Streets?
+func countStreetsCrossed(streets: [String], drivers: [(String, String)]) -> [Int] {
+    // Создаем словарь для быстрого доступа к индексам улиц
+    var streetIndex = [String: Int]()
+    for (index, street) in streets.enumerated() {
+        streetIndex[street] = index
+    }
+
+    // Результирующий массив для хранения количества пересеченных улиц для каждого водителя
+    var results = [Int]()
+
+    // Для каждого водителя вычисляем количество пересеченных улиц
+    for driver in drivers {
+        let entryStreet = driver.0
+        let exitStreet = driver.1
+
+        if let entryIndex = streetIndex[entryStreet], let exitIndex = streetIndex[exitStreet] {
+            // Находим диапазон индексов пересеченных улиц
+            let crossedStreets = abs(exitIndex - entryIndex) - 1
+            results.append(crossedStreets)
+        } else {
+            // Если входная или выходная улица не найдена (теоретически не должно быть), добавляем 0
+            results.append(0)
+        }
+    }
+
+    return results
+}
