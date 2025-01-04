@@ -149,3 +149,15 @@ func numberToString(number: Int) -> String {
 func quadratic(_ a: Double, _ b: Double, _ c: Double) -> Double {
   -c / b
 }
+
+//Disarium Number (Special Numbers Series #3)
+func disariumNumber(_ number: Int) -> String {
+  let digits = String(number).compactMap { Int(String($0)) }
+    
+    let sum = digits.enumerated().reduce(0) { partialSum, pair in
+        let (index, digit) = pair
+        return partialSum + Int(pow(Double(digit), Double(index + 1)))
+    }
+    
+    return sum == number ? "Disarium !!" : "Not !!"
+}
