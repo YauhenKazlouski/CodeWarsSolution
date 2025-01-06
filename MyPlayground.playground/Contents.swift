@@ -161,3 +161,25 @@ func disariumNumber(_ number: Int) -> String {
     
     return sum == number ? "Disarium !!" : "Not !!"
 }
+
+//Binary Calculator
+enum Operator {
+    case ADD, SUBTRACT, MULTIPLY
+}
+
+func calculate(_ a:String, _ b:String, _ op:Operator) -> String {
+   guard let a = Int(a, radix: 2), let b = Int(b, radix: 2) else { return "Error"}
+    
+    let result: Int
+    
+    switch op {
+    case .ADD:
+        result = a + b
+    case .SUBTRACT:
+        result = a - b
+    case .MULTIPLY:
+        result = a * b
+    }
+    
+    return String(result, radix: 2)
+}
